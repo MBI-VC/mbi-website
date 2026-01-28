@@ -45,23 +45,23 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: siteConfig.url,
-    title: `${siteConfig.name} | ${siteConfig.tagline}`,
-    description: siteConfig.description,
+    title: 'MBI.VC | Operator-Led Venture Capital',
+    description: 'We back resilient founders with real traction. $100K-$500K checks in media, sports, AI, tech, and CPG.',
     siteName: siteConfig.name,
     images: [
       {
-        url: '/og-image.png', // TODO: Add OG image
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
+        url: '/light_purple/icon-circle-2000.png',
+        width: 2000,
+        height: 2000,
+        alt: 'MBI.VC Logo',
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: `${siteConfig.name} | ${siteConfig.tagline}`,
-    description: siteConfig.description,
-    images: ['/og-image.png'], // TODO: Add OG image
+    card: 'summary',
+    title: 'MBI.VC | Operator-Led Venture Capital',
+    description: 'We back resilient founders with real traction. $100K-$500K checks in media, sports, AI, tech, and CPG.',
+    images: ['/light_purple/icon-circle-2000.png'],
   },
   robots: {
     index: true,
