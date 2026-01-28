@@ -209,22 +209,22 @@ export const team = {
       boards: ['Access Global Media', 'Cape Media', 'Prediction Media'],
       location: 'Jacksonville Beach, FL',
       personal: 'Lifelong Cubs fan. Lives with wife Melanie and daughters Olivia and Charlotte.',
-      linkedin: '', // TODO: Add LinkedIn
+      linkedin: 'https://www.linkedin.com/in/morgan-busby-72a53017/',
     },
     {
       name: 'Adam Kramer',
       role: 'Founding Partner & COO',
       image: '/images/team/adam-kramer.png',
       highlights: [
-        'Executive Producer on Stumble Guys: 60M MAU, $14M MRR',
-        'Built logistics ops for Bird across 11 markets—helped secure fastest $1B valuation in history',
-        'Co-founded OCC pilot-approved digital bank with ex-IBM CTO',
-        'Raised $20M+, 2 exits, products reaching 60M+ users',
+        'Executive Producer on Stumble Guys, with 60M MAU and $14M MRR',
+        'Built logistics ops for Bird across 11 markets, securing fastest $1B valuation in history',
+        'Raised $20M+ across personal and client ventures, with 2 exits prior to founding MBI',
+        'Florida State University "7 Under 30" honoree',
       ],
       boards: ['Culture Health', 'LiQure', 'DevFlow'],
       location: 'Bangkok, Thailand',
       personal: '',
-      linkedin: '', // TODO: Add LinkedIn
+      linkedin: 'https://www.linkedin.com/in/theadamkramer/',
     },
   ],
 }
