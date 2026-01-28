@@ -223,7 +223,7 @@ export const team = {
       ],
       boards: ['Culture Health', 'LiQure', 'DevFlow'],
       location: 'Bangkok, Thailand',
-      personal: '',
+      personal: 'Cutting-edge techie. Lives with wife Thu Thu and son Graphics.',
       linkedin: 'https://www.linkedin.com/in/theadamkramer/',
     },
   ],
