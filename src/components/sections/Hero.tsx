@@ -40,7 +40,7 @@ export function Hero() {
             <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-display-lg xl:text-display-xl font-bold text-white leading-none tracking-tight">
               We Build
             </span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-display-lg xl:text-display-xl font-bold leading-none tracking-tight mt-2 text-gradient">
+            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-display-lg xl:text-display-xl font-bold leading-tight tracking-tight mt-2 text-gradient">
               Alongside You
             </span>
           </h1>

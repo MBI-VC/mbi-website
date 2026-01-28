@@ -34,7 +34,7 @@ export const siteConfig = {
 export const hero = {
   // More founder-focused, benefit-driven headline
   headline: 'We Build Alongside You',
-  subheadline: 'MBI is an operator-led venture firm. We back resilient founders with real traction—and we stay in the trenches with you.',
+  subheadline: 'MBI is an operator-led venture firm. We back resilient founders with real traction, and we stay in the trenches with you.',
   primaryCta: 'Start a Conversation',
   secondaryCta: 'View Portfolio',
   // Eyebrow text above headline
@@ -47,7 +47,7 @@ export const approach = {
 
   paragraphs: [
     'Ideas matter, but the people behind them matter more. The best founders refuse to quit. They adapt when things go sideways and find a way forward when most others would stop.',
-    'We look for businesses that have proven something in the real world—even if it\'s just early customers or modest revenue. That proof of life shows real validation and a founder who\'s pushed through obstacles to ship.',
+    'We look for businesses that have proven something in the real world, even if it\'s just early customers or modest revenue. That proof of life shows real validation and a founder who\'s pushed through obstacles to ship.',
     'We\'re not passive capital. We look for opportunities where our operating experience can meaningfully accelerate your trajectory.',
   ],
 
@@ -62,17 +62,17 @@ export const approach = {
     {
       title: 'Trust',
       question: 'Do we trust the person running the business?',
-      description: 'Trust is everything. We back founders whose word means something—who communicate honestly in good times and bad. We\'d rather back someone we trust with an imperfect plan than a brilliant strategist we don\'t believe.',
+      description: 'Trust is everything. We back founders whose word means something, who communicate honestly in good times and bad. We\'d rather back someone we trust with an imperfect plan than a brilliant strategist we don\'t believe.',
     },
     {
       title: 'Conviction',
       question: 'Will they stay the course when things get hard?',
-      description: 'Every business faces turbulence. The best founders lead with conviction—a blend of belief, courage, and endurance. They\'re driven by purpose, not comfort.',
+      description: 'Every business faces turbulence. The best founders lead with conviction, a blend of belief, courage, and endurance. They\'re driven by purpose, not comfort.',
     },
     {
       title: 'Vision',
       question: 'Is the idea grounded in a real problem?',
-      description: 'We want to understand what you\'re solving, for whom, and why it matters. Strong ideas don\'t have to be revolutionary—they need to work better, faster, or more efficiently than what exists.',
+      description: 'We want to understand what you\'re solving, for whom, and why it matters. Strong ideas don\'t have to be revolutionary. They need to work better, faster, or more efficiently than what exists.',
     },
     {
       title: 'Discipline',
@@ -186,7 +186,7 @@ export const portfolio = {
 }
 
 export const testimonial = {
-  quote: 'Morgan understood our vision from day one. Over time he\'s become much more than an investor—acting as a mentor and offering guidance, perspective, and hands-on involvement across the business.',
+  quote: 'Morgan understood our vision from day one. Over time he\'s become much more than an investor, acting as a mentor and offering guidance, perspective, and hands-on involvement across the business.',
   author: 'Ashley Adir',
   role: 'Founder, Cape Media',
 }
