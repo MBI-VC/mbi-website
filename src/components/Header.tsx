@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const navLinks = [
   { href: '#approach', label: 'Approach' },
-  { href: '#investments', label: 'Investments' },
+  { href: '#investments', label: 'Portfolio' },
   { href: '#team', label: 'Team' },
   { href: '#contact', label: 'Contact' },
 ]
@@ -25,54 +25,44 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-sm border-b border-neutral-100 py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-dark-950/90 backdrop-blur-lg border-b border-dark-800/50 py-4'
+          : 'bg-transparent py-6'
       }`}
     >
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
           <Image
             src="/logo.png"
             alt="MBI.VC"
-            width={36}
-            height={36}
-            className={`transition-all ${isScrolled ? 'w-8 h-8' : 'w-9 h-9'}`}
+            width={40}
+            height={40}
+            className={`transition-all duration-300 ${isScrolled ? 'w-9 h-9' : 'w-10 h-10'}`}
           />
-          <span className={`font-semibold tracking-tight transition-colors ${
-            isScrolled ? 'text-neutral-900' : 'text-white'
-          }`}>
-            MBI.VC
+          <span className="font-bold text-xl tracking-tight text-white">
+            MBI<span className="text-accent-500">.VC</span>
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`text-sm transition-colors ${
-                isScrolled
-                  ? 'text-neutral-600 hover:text-neutral-900'
-                  : 'text-neutral-300 hover:text-white'
-              }`}
+              className="px-4 py-2 text-sm font-medium text-dark-300 hover:text-white transition-colors rounded-full hover:bg-white/5"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className={`text-sm font-medium px-5 py-2.5 rounded-full transition-colors ${
-              isScrolled
-                ? 'text-white bg-neutral-900 hover:bg-neutral-800'
-                : 'text-neutral-900 bg-white hover:bg-neutral-100'
-            }`}
+            className="ml-4 px-6 py-2.5 text-sm font-semibold text-dark-950 bg-accent-500 hover:bg-accent-400 rounded-full transition-all duration-300 hover:scale-[1.02]"
           >
             Get in Touch
           </a>
@@ -85,7 +75,7 @@ export function Header() {
           aria-label="Toggle menu"
         >
           <svg
-            className={`w-6 h-6 transition-colors ${isScrolled ? 'text-neutral-900' : 'text-white'}`}
+            className="w-6 h-6 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -110,29 +100,31 @@ export function Header() {
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-neutral-100 py-4 shadow-lg">
-          <nav className="container-wide flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-base text-neutral-600 hover:text-neutral-900 transition-colors py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
+      <div
+        className={`md:hidden absolute top-full left-0 right-0 bg-dark-900/95 backdrop-blur-lg border-b border-dark-800 transition-all duration-300 ${
+          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}
+      >
+        <nav className="container-wide flex flex-col gap-2 py-6">
+          {navLinks.map((link) => (
             <a
-              href="#contact"
-              className="text-base font-medium text-white bg-neutral-900 hover:bg-neutral-800 px-5 py-3 rounded-full transition-colors text-center mt-2"
+              key={link.href}
+              href={link.href}
+              className="text-lg text-dark-200 hover:text-white transition-colors py-3 border-b border-dark-800"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Get in Touch
+              {link.label}
             </a>
-          </nav>
-        </div>
-      )}
+          ))}
+          <a
+            href="#contact"
+            className="mt-4 text-center text-base font-semibold text-dark-950 bg-accent-500 hover:bg-accent-400 px-6 py-4 rounded-full transition-colors"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Get in Touch
+          </a>
+        </nav>
+      </div>
     </header>
   )
 }

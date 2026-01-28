@@ -1,31 +1,41 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { siteConfig, footer } from '@/content/site-content'
 
 const navLinks = [
   { href: '#approach', label: 'Approach' },
-  { href: '#investments', label: 'Investments' },
+  { href: '#investments', label: 'Portfolio' },
   { href: '#team', label: 'Team' },
   { href: '#contact', label: 'Contact' },
 ]
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-950 text-white">
+    <footer className="bg-dark-950 border-t border-dark-800">
       <div className="container-wide py-16 md:py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="text-2xl font-semibold tracking-tight">
-              {siteConfig.name}
+            <Link href="/" className="inline-flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt="MBI.VC"
+                width={40}
+                height={40}
+                className="w-10 h-10"
+              />
+              <span className="text-2xl font-bold text-white tracking-tight">
+                MBI<span className="text-accent-500">.VC</span>
+              </span>
             </Link>
-            <p className="mt-3 text-neutral-400 max-w-sm">
+            <p className="mt-4 text-dark-400 max-w-sm leading-relaxed">
               {footer.tagline}
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-sm font-medium text-neutral-300 uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-medium text-dark-500 uppercase tracking-wider mb-5">
               Navigate
             </h4>
             <nav className="flex flex-col gap-3">
@@ -33,7 +43,7 @@ export function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-neutral-400 hover:text-white transition-colors"
+                  className="text-dark-300 hover:text-accent-400 transition-colors"
                 >
                   {link.label}
                 </a>
@@ -43,12 +53,12 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-medium text-neutral-300 uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-medium text-dark-500 uppercase tracking-wider mb-5">
               Contact
             </h4>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="text-neutral-400 hover:text-white transition-colors"
+              className="text-dark-300 hover:text-accent-400 transition-colors"
             >
               {siteConfig.email}
             </a>
@@ -56,11 +66,11 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-neutral-500">
+        <div className="mt-16 pt-8 border-t border-dark-800 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-dark-600">
             {footer.copyright}
           </p>
-          <p className="text-sm text-neutral-500">
+          <p className="text-sm text-dark-600">
             All rights reserved.
           </p>
         </div>

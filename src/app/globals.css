@@ -10,11 +10,11 @@
   }
 
   body {
-    @apply bg-white text-neutral-900;
+    @apply bg-dark-950 text-dark-100;
   }
 
   ::selection {
-    @apply bg-brand-100 text-brand-900;
+    @apply bg-accent-500/30 text-white;
   }
 }
 
@@ -24,29 +24,107 @@
   }
 
   .container-wide {
-    @apply mx-auto max-w-6xl px-6;
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
   }
 
   .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-24 md:py-32 lg:py-40;
   }
 
-  .text-balance {
-    text-wrap: balance;
+  .section-padding-sm {
+    @apply py-16 md:py-24;
+  }
+
+  /* Text gradient utility */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-400 to-accent-600;
+  }
+
+  /* Glow effects */
+  .glow-accent {
+    box-shadow: 0 0 60px -15px theme('colors.accent.500 / 50%');
+  }
+
+  .glow-accent-sm {
+    box-shadow: 0 0 30px -10px theme('colors.accent.500 / 40%');
+  }
+
+  /* Card styles */
+  .card-dark {
+    @apply bg-dark-900/50 backdrop-blur-sm border border-dark-800 rounded-2xl;
+  }
+
+  .card-dark-hover {
+    @apply card-dark transition-all duration-300 hover:bg-dark-800/50 hover:border-dark-700;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold
+           bg-accent-500 text-dark-950 rounded-full transition-all duration-300
+           hover:bg-accent-400 hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-base font-medium
+           text-white border border-dark-600 rounded-full transition-all duration-300
+           hover:bg-white/5 hover:border-dark-500;
   }
 }
 
 @layer utilities {
-  .animate-delay-100 {
-    animation-delay: 100ms;
+  /* Animation delays */
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+  .animate-delay-600 { animation-delay: 600ms; }
+  .animate-delay-700 { animation-delay: 700ms; }
+  .animate-delay-800 { animation-delay: 800ms; }
+
+  /* Scroll reveal - applied via JS intersection observer */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
-  .animate-delay-200 {
-    animation-delay: 200ms;
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .animate-delay-300 {
-    animation-delay: 300ms;
+
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
-  .animate-delay-400 {
-    animation-delay: 400ms;
+
+  .reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .reveal-scale.visible {
+    opacity: 1;
+    transform: scale(1);
   }
 }
