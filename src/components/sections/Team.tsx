@@ -100,18 +100,6 @@ export function Team() {
                 </div>
               )}
 
-              {/* MBI role if applicable */}
-              {member.mbiRole && (
-                <div className="mt-5 pt-5 border-t border-neutral-200">
-                  <h4 className="text-xs font-medium text-neutral-500 uppercase tracking-wider mb-2">
-                    At MBI
-                  </h4>
-                  <p className="text-sm text-neutral-700 leading-relaxed">
-                    {member.mbiRole}
-                  </p>
-                </div>
-              )}
-
               {/* Personal note */}
               {member.personal && (
                 <p className="mt-5 pt-5 border-t border-neutral-200 text-sm text-neutral-500 italic">

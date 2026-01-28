@@ -193,7 +193,7 @@ export const testimonial = {
 
 export const team = {
   title: 'Team',
-  subtitle: 'Operators who\'ve built and scaled companies—now building alongside founders.',
+  subtitle: 'A global team of operators backing the best founders in the world.',
 
   members: [
     {
@@ -221,8 +221,8 @@ export const team = {
         'Led initiatives for Disney, Coca-Cola, Bird, and more',
         'Background in fintech, gaming, blockchain, mobility',
       ],
-      mbiRole: 'Leads operational diligence, takes fractional exec roles across portfolio, incubates shared services and internal products.',
-      location: '',
+      boards: ['Culture Health', 'LiQure', 'DevFlow'],
+      location: 'Bangkok, Thailand',
       personal: '',
       linkedin: '', // TODO: Add LinkedIn
     },
