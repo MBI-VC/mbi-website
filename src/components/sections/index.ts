@@ -1,0 +1,7 @@
+export { Hero } from './Hero'
+export { Approach } from './Approach'
+export { Investments } from './Investments'
+export { Testimonial } from './Testimonial'
+export { Team } from './Team'
+export { Contact } from './Contact'
+export { Newsletter } from './Newsletter'
