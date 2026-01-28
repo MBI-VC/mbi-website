@@ -22,6 +22,13 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  icons: {
+    icon: [
+      { url: '/light_purple/favicon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/light_purple/icon-500.png', sizes: '500x500', type: 'image/png' },
+    ],
+    apple: '/light_purple/icon-500.png',
+  },
   keywords: [
     'venture capital',
     'early-stage investing',

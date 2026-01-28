@@ -16,17 +16,14 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-flex items-center gap-3">
+            <Link href="/" className="inline-block">
               <Image
-                src="/logo.png"
+                src="/light_purple/icon-500.png"
                 alt="MBI.VC"
-                width={40}
-                height={40}
-                className="w-10 h-10"
+                width={48}
+                height={48}
+                className="w-12 h-12"
               />
-              <span className="text-2xl font-bold text-white tracking-tight">
-                MBI<span className="text-accent-500">.VC</span>
-              </span>
             </Link>
             <p className="mt-4 text-dark-400 max-w-sm leading-relaxed">
               {footer.tagline}

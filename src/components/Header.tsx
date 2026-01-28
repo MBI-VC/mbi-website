@@ -35,18 +35,15 @@ export function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+          className="hover:opacity-80 transition-opacity"
         >
           <Image
-            src="/logo.png"
+            src="/light_purple/icon-500.png"
             alt="MBI.VC"
-            width={40}
-            height={40}
-            className={`transition-all duration-300 ${isScrolled ? 'w-9 h-9' : 'w-10 h-10'}`}
+            width={44}
+            height={44}
+            className={`transition-all duration-300 ${isScrolled ? 'w-10 h-10' : 'w-11 h-11'}`}
           />
-          <span className="font-bold text-xl tracking-tight text-white">
-            MBI<span className="text-accent-500">.VC</span>
-          </span>
         </Link>
 
         {/* Desktop Navigation */}
