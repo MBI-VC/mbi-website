@@ -13,7 +13,7 @@ export function Testimonial() {
 
       {/* Animated background orbs */}
       <div className="absolute -left-40 top-1/2 -translate-y-1/2 w-80 h-80 bg-accent-500/10 rounded-full blur-3xl animate-glow-pulse" />
-      <div className="absolute -right-40 top-1/3 w-60 h-60 bg-accent-600/10 rounded-full blur-3xl animate-glow-pulse animate-delay-500" />
+      <div className="absolute -right-40 top-1/3 w-60 h-60 bg-glow-500/10 rounded-full blur-3xl animate-glow-pulse animate-delay-500" />
 
       <div className="container-wide relative">
         <figure
@@ -24,7 +24,7 @@ export function Testimonial() {
         >
           {/* Large quote mark - with hover animation */}
           <div className="flex justify-center mb-10">
-            <div className="relative w-16 h-16 flex items-center justify-center bg-accent-500/10 rounded-2xl border border-accent-500/20 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:border-accent-500/40 group-hover:shadow-[0_0_40px_-10px_rgba(245,158,11,0.3)]">
+            <div className="relative w-16 h-16 flex items-center justify-center bg-accent-500/10 rounded-2xl border border-accent-500/20 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:border-accent-500/40 group-hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)]">
               <svg
                 className="w-8 h-8 text-accent-500 transition-transform duration-500 group-hover:scale-110"
                 fill="currentColor"

@@ -5,21 +5,22 @@ import { siteConfig, hero } from '@/content/site-content'
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-dark-950" />
+      {/* Gradient background - deep purple-black */}
+      <div className="absolute inset-0 bg-dark-975" />
 
-      {/* Animated gradient orbs */}
+      {/* Animated gradient orbs - purple and pink */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/4 w-[800px] h-[800px] rounded-full bg-gradient-radial from-accent-500/20 via-accent-600/5 to-transparent blur-3xl animate-glow-pulse" />
-        <div className="absolute -bottom-1/2 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-radial from-accent-600/15 via-accent-700/5 to-transparent blur-3xl animate-glow-pulse animate-delay-500" />
+        <div className="absolute -top-1/2 -left-1/4 w-[800px] h-[800px] rounded-full bg-gradient-radial from-accent-600/20 via-accent-700/5 to-transparent blur-3xl animate-glow-pulse" />
+        <div className="absolute -bottom-1/2 -right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-radial from-glow-500/15 via-glow-600/5 to-transparent blur-3xl animate-glow-pulse animate-delay-500" />
+        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-gradient-radial from-accent-500/10 to-transparent blur-3xl animate-glow-pulse animate-delay-300" />
       </div>
 
       {/* Grid pattern overlay */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.02]"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
-                           linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(to right, rgba(168,85,247,0.15) 1px, transparent 1px),
+                           linear-gradient(to bottom, rgba(168,85,247,0.15) 1px, transparent 1px)`,
           backgroundSize: '80px 80px',
         }}
       />
@@ -51,14 +52,14 @@ export function Hero() {
 
           {/* CTAs */}
           <div className="mt-12 md:mt-14 flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
-            <a href="#contact" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold bg-accent-500 text-dark-950 rounded-full transition-all duration-300 hover:bg-accent-400 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(245,158,11,0.5)] active:scale-[0.98] overflow-hidden">
+            <a href="#contact" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold bg-gradient-to-r from-accent-500 to-accent-600 text-white rounded-full transition-all duration-300 hover:from-accent-400 hover:to-accent-500 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.5)] active:scale-[0.98] overflow-hidden">
               <span className="relative z-10 flex items-center">
                 {hero.primaryCta}
                 <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-accent-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-400 via-glow-500 to-accent-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
             <a href="#investments" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white border border-dark-600 rounded-full transition-all duration-300 hover:border-accent-500/50 hover:bg-accent-500/5 overflow-hidden">
               <span className="relative z-10">{hero.secondaryCta}</span>

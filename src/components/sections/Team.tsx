@@ -55,7 +55,7 @@ export function Team() {
                   {/* Photo with accent border */}
                   <div className="flex-shrink-0">
                     <div className="relative w-32 h-32 sm:w-36 sm:h-36">
-                      <div className="absolute inset-0 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-accent-500 via-glow-500 to-accent-600 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500" />
                       <div className="relative w-full h-full bg-dark-800 rounded-2xl overflow-hidden">
                         <Image
                           src={member.image}

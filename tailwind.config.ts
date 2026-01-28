@@ -9,41 +9,48 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Bold amber accent - energetic, confident
+        // Purple/violet accent - from the reference design
         accent: {
-          50: '#fffbeb',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f',
-          950: '#451a03',
+          50: '#faf5ff',
+          100: '#f3e8ff',
+          200: '#e9d5ff',
+          300: '#d8b4fe',
+          400: '#c084fc',
+          500: '#a855f7',
+          600: '#9333ea',
+          700: '#7c3aed',
+          800: '#6b21a8',
+          900: '#581c87',
+          950: '#3b0764',
         },
-        // Deep neutrals for dark theme
+        // Pink/magenta for glow accents
+        glow: {
+          400: '#f472b6',
+          500: '#ec4899',
+          600: '#db2777',
+        },
+        // Deep purple-tinted dark backgrounds
         dark: {
           50: '#fafafa',
-          100: '#f5f5f5',
-          200: '#e5e5e5',
-          300: '#d4d4d4',
-          400: '#a3a3a3',
-          500: '#737373',
-          600: '#525252',
-          700: '#404040',
-          800: '#262626',
-          850: '#1a1a1a',
-          900: '#171717',
-          950: '#0a0a0a',
+          100: '#f4f4f5',
+          200: '#e4e4e7',
+          300: '#d4d4d8',
+          400: '#a1a1aa',
+          500: '#71717a',
+          600: '#52525b',
+          700: '#3f3f46',
+          800: '#27272a',
+          850: '#1f1f23',
+          900: '#18181b',
+          925: '#121216',
+          950: '#0c0c10',
+          975: '#08080c',
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        // Bolder display sizes
         'display-xl': ['5rem', { lineHeight: '1', letterSpacing: '-0.02em' }],
         'display-lg': ['4rem', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
         'display-md': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
@@ -91,7 +98,6 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'noise': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
       },
     },
   },

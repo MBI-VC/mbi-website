@@ -11,7 +11,7 @@ export function Approach() {
   const closingReveal = useScrollReveal()
 
   return (
-    <section id="approach" className="section-padding bg-dark-900 relative overflow-hidden">
+    <section id="approach" className="section-padding bg-dark-950 relative overflow-hidden">
       {/* Subtle gradient accent */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-500/50 to-transparent" />
 
@@ -54,7 +54,7 @@ export function Approach() {
             ].map((item, index) => (
               <div
                 key={item.label}
-                className="group p-6 bg-dark-800/50 rounded-2xl border border-dark-700/50 hover:border-accent-500/30 hover:bg-dark-800/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_40px_-15px_rgba(245,158,11,0.15)]"
+                className="group p-6 bg-dark-800/50 rounded-2xl border border-dark-700/50 hover:border-accent-500/30 hover:bg-dark-800/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_40px_-15px_rgba(168,85,247,0.15)]"
               >
                 <p className="text-sm text-dark-500 uppercase tracking-wider mb-2 group-hover:text-accent-500/70 transition-colors">{item.label}</p>
                 <p className={`text-xl font-bold transition-colors ${item.highlight ? 'text-accent-400 group-hover:text-accent-300' : 'text-white group-hover:text-accent-400'}`}>
@@ -62,7 +62,7 @@ export function Approach() {
                 </p>
               </div>
             ))}
-            <div className="md:col-span-2 group p-6 bg-dark-800/50 rounded-2xl border border-dark-700/50 hover:border-accent-500/30 hover:bg-dark-800/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_40px_-15px_rgba(245,158,11,0.15)]">
+            <div className="md:col-span-2 group p-6 bg-dark-800/50 rounded-2xl border border-dark-700/50 hover:border-accent-500/30 hover:bg-dark-800/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_40px_-15px_rgba(168,85,247,0.15)]">
               <p className="text-sm text-dark-500 uppercase tracking-wider mb-2 group-hover:text-accent-500/70 transition-colors">Sectors</p>
               <p className="text-xl font-bold text-white group-hover:text-accent-400 transition-colors">{approach.investmentDetails.focus}</p>
               <p className="text-sm text-dark-400 mt-2">{approach.investmentDetails.note}</p>
@@ -92,14 +92,14 @@ export function Approach() {
             {approach.principles.map((principle, index) => (
               <div
                 key={principle.title}
-                className="group relative p-8 bg-dark-800/30 border border-dark-700/50 rounded-2xl transition-all duration-500 hover:bg-dark-800/50 hover:border-accent-500/30 hover:-translate-y-2 hover:shadow-[0_20px_50px_-20px_rgba(245,158,11,0.2)]"
+                className="group relative p-8 bg-dark-800/30 border border-dark-700/50 rounded-2xl transition-all duration-500 hover:bg-dark-800/50 hover:border-accent-500/30 hover:-translate-y-2 hover:shadow-[0_20px_50px_-20px_rgba(168,85,247,0.2)]"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
 
                 {/* Number accent - rotates on hover */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 flex items-center justify-center bg-accent-500 text-dark-950 text-lg font-bold rounded-xl transition-all duration-500 group-hover:rotate-12 group-hover:scale-110 group-hover:shadow-[0_0_30px_-5px_rgba(245,158,11,0.5)]">
+                <div className="absolute -top-4 -left-4 w-12 h-12 flex items-center justify-center bg-accent-500 text-dark-950 text-lg font-bold rounded-xl transition-all duration-500 group-hover:rotate-12 group-hover:scale-110 group-hover:shadow-[0_0_30px_-5px_rgba(168,85,247,0.5)]">
                   {String(index + 1).padStart(2, '0')}
                 </div>
 
@@ -144,11 +144,11 @@ export function Approach() {
               {approach.howWeHelp.items.map((item, index) => (
                 <div
                   key={item.label}
-                  className="group p-5 bg-dark-800/30 rounded-xl border border-dark-700/50 transition-all duration-300 hover:border-accent-500/30 hover:bg-dark-800/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(245,158,11,0.15)] cursor-default"
+                  className="group p-5 bg-dark-800/30 rounded-xl border border-dark-700/50 transition-all duration-300 hover:border-accent-500/30 hover:bg-dark-800/50 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(168,85,247,0.15)] cursor-default"
                   style={{ transitionDelay: `${index * 50}ms` }}
                 >
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-2 h-2 rounded-full bg-accent-500 transition-all duration-300 group-hover:scale-150 group-hover:shadow-[0_0_10px_2px_rgba(245,158,11,0.4)]" />
+                    <div className="w-2 h-2 rounded-full bg-accent-500 transition-all duration-300 group-hover:scale-150 group-hover:shadow-[0_0_10px_2px_rgba(168,85,247,0.4)]" />
                     <span className="font-semibold text-white group-hover:text-accent-400 transition-colors">{item.label}</span>
                   </div>
                   <p className="text-sm text-dark-400 pl-5 group-hover:text-dark-300 transition-colors">{item.detail}</p>
@@ -165,7 +165,7 @@ export function Approach() {
             closingReveal.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="group relative p-10 md:p-14 bg-gradient-to-br from-accent-500/10 via-dark-800/50 to-dark-900 rounded-3xl border border-accent-500/20 overflow-hidden transition-all duration-500 hover:border-accent-500/40 hover:shadow-[0_0_80px_-20px_rgba(245,158,11,0.2)]">
+          <div className="group relative p-10 md:p-14 bg-gradient-to-br from-accent-500/10 via-dark-800/50 to-dark-900 rounded-3xl border border-accent-500/20 overflow-hidden transition-all duration-500 hover:border-accent-500/40 hover:shadow-[0_0_80px_-20px_rgba(168,85,247,0.2)]">
             {/* Glow effect - animates on hover */}
             <div className="absolute -top-20 -right-20 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl transition-all duration-700 group-hover:scale-150 group-hover:bg-accent-500/30" />
 

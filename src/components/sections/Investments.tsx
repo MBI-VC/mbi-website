@@ -10,7 +10,7 @@ const categoryColors: Record<string, { bg: string; text: string; border: string;
   Entertainment: { bg: 'bg-pink-500/10', text: 'text-pink-400', border: 'border-pink-500/20', glow: 'rgba(236,72,153,0.3)' },
 }
 
-const defaultCategory = { bg: 'bg-dark-800', text: 'text-dark-400', border: 'border-dark-700', glow: 'rgba(245,158,11,0.2)' }
+const defaultCategory = { bg: 'bg-dark-800', text: 'text-dark-400', border: 'border-dark-700', glow: 'rgba(168,85,247,0.2)' }
 
 export function Investments() {
   const headerReveal = useScrollReveal()
@@ -159,7 +159,7 @@ export function Investments() {
                           {investment.name}
                         </h3>
                         {investment.badge && (
-                          <span className="flex-shrink-0 text-xs font-bold px-3 py-1 bg-accent-500 text-dark-950 rounded-full transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_-5px_rgba(245,158,11,0.5)]">
+                          <span className="flex-shrink-0 text-xs font-bold px-3 py-1 bg-accent-500 text-dark-950 rounded-full transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_-5px_rgba(168,85,247,0.5)]">
                             {investment.badge}
                           </span>
                         )}
