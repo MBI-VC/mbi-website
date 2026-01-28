@@ -28,7 +28,7 @@ export const siteConfig = {
   },
 
   // Focus areas
-  focusAreas: ['Media', 'Sports', 'Online Businesses', 'Experiential Offerings'],
+  focusAreas: ['Media', 'Sports', 'AI', 'Tech', 'CPG'],
 }
 
 export const hero = {
@@ -54,7 +54,7 @@ export const approach = {
   investmentDetails: {
     stage: 'Pre-seed to Series A',
     checkSize: '$100K – $500K',
-    focus: 'Media, Sports, Online Businesses, Experiential Offerings',
+    focus: 'Media, Sports, AI, Tech, CPG',
     note: 'Industry-agnostic when we find the right founder.',
   },
 
@@ -103,12 +103,12 @@ export const approach = {
 
 export const portfolio = {
   title: 'Portfolio',
-  subtitle: 'Companies we\'ve backed across media, sports, technology, and entertainment.',
+  subtitle: 'Companies we\'ve backed across media, sports, AI, tech, and CPG.',
 
   // Stats for social proof
   stats: {
     companies: '11',
-    categories: '4',
+    categories: '5',
   },
 
   investments: [
@@ -192,7 +192,7 @@ export const testimonial = {
 }
 
 export const team = {
-  title: 'Team',
+  title: 'Founding Team',
   subtitle: 'A global team of operators backing the best founders in the world.',
 
   members: [
