@@ -65,12 +65,12 @@ export function Newsletter() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={newsletter.placeholder}
                 required
-                className="flex-1 px-5 py-3.5 bg-dark-800/50 border border-dark-700 rounded-full text-white placeholder-dark-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500 transition-colors"
+                className="flex-1 px-5 py-3.5 bg-dark-800/50 border border-dark-700 rounded-xl text-white placeholder-dark-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500 transition-colors"
               />
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="px-8 py-3.5 bg-accent-500 text-dark-950 font-semibold rounded-full hover:bg-accent-400 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap hover:scale-[1.02] active:scale-[0.98]"
+                className="px-8 py-3.5 bg-accent-500 text-dark-950 font-semibold rounded-xl hover:bg-accent-400 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap hover:scale-[1.02] active:scale-[0.98]"
               >
                 {status === 'submitting' ? 'Subscribing...' : newsletter.button}
               </button>

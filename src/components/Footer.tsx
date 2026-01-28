@@ -22,7 +22,7 @@ export function Footer() {
                 alt="MBI.VC"
                 width={48}
                 height={48}
-                className="w-12 h-12"
+                className="w-12 h-12 rounded-xl"
               />
             </Link>
             <p className="mt-4 text-dark-400 max-w-sm leading-relaxed">

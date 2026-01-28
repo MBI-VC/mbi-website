@@ -42,7 +42,7 @@ export function Header() {
             alt="MBI.VC"
             width={44}
             height={44}
-            className={`transition-all duration-300 ${isScrolled ? 'w-10 h-10' : 'w-11 h-11'}`}
+            className={`rounded-xl transition-all duration-300 ${isScrolled ? 'w-10 h-10' : 'w-11 h-11'}`}
           />
         </Link>
 
@@ -59,7 +59,7 @@ export function Header() {
           ))}
           <a
             href="#contact"
-            className="ml-4 px-6 py-2.5 text-sm font-semibold text-dark-950 bg-accent-500 hover:bg-accent-400 rounded-full transition-all duration-300 hover:scale-[1.02]"
+            className="ml-4 px-6 py-2.5 text-sm font-semibold text-dark-950 bg-accent-500 hover:bg-accent-400 rounded-xl transition-all duration-300 hover:scale-[1.02]"
           >
             Get in Touch
           </a>
@@ -115,7 +115,7 @@ export function Header() {
           ))}
           <a
             href="#contact"
-            className="mt-4 text-center text-base font-semibold text-dark-950 bg-accent-500 hover:bg-accent-400 px-6 py-4 rounded-full transition-colors"
+            className="mt-4 text-center text-base font-semibold text-dark-950 bg-accent-500 hover:bg-accent-400 px-6 py-4 rounded-xl transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Get in Touch

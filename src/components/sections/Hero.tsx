@@ -52,7 +52,7 @@ export function Hero() {
 
           {/* CTAs */}
           <div className="mt-12 md:mt-14 flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
-            <a href="#contact" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold bg-gradient-to-r from-accent-500 to-accent-600 text-white rounded-full transition-all duration-300 hover:from-accent-400 hover:to-accent-500 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.5)] active:scale-[0.98] overflow-hidden">
+            <a href="#contact" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-semibold bg-gradient-to-r from-accent-500 to-accent-600 text-white rounded-xl transition-all duration-300 hover:from-accent-400 hover:to-accent-500 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(168,85,247,0.5)] active:scale-[0.98] overflow-hidden">
               <span className="relative z-10 flex items-center">
                 {hero.primaryCta}
                 <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,7 +61,7 @@ export function Hero() {
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent-400 via-glow-500 to-accent-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
-            <a href="#investments" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white border border-dark-600 rounded-full transition-all duration-300 hover:border-accent-500/50 hover:bg-accent-500/5 overflow-hidden">
+            <a href="#investments" className="group relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white border border-dark-600 rounded-xl transition-all duration-300 hover:border-accent-500/50 hover:bg-accent-500/5 overflow-hidden">
               <span className="relative z-10">{hero.secondaryCta}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-0" />
             </a>
