@@ -1,0 +1,9 @@
+﻿Table Name,Field Name,Field ID,Field Type,Field Description,Table ID,Base ID
+Web,Email,fldpwhtEbOb1yJOrq,singleLineText,,tblrjGo2SF44Ei0IM,appVAEUf7WWAT4u9P
+Web,Name,fldyxNgf8Ogo17X4S,singleLineText,,tblrjGo2SF44Ei0IM,appVAEUf7WWAT4u9P
+Web,Company,fld6ol0ZmvwztojcG,singleLineText,,tblrjGo2SF44Ei0IM,appVAEUf7WWAT4u9P
+Web,URL,fldnyWQ4MTC58kcbF,singleLineText,,tblrjGo2SF44Ei0IM,appVAEUf7WWAT4u9P
+Web,Story,fldbiYYu5u32lXl0H,multilineText,,tblrjGo2SF44Ei0IM,appVAEUf7WWAT4u9P
+Web,Newsletter,flddPsNNIqGbM3mIm,checkbox,,tblrjGo2SF44Ei0IM,appVAEUf7WWAT4u9P
+Web,Created,fldkYch8waHZeP8Xp,createdTime,,tblrjGo2SF44Ei0IM,appVAEUf7WWAT4u9P
+Web,Modified,fldY73rEzC4OSK79W,lastModifiedTime,,tblrjGo2SF44Ei0IM,appVAEUf7WWAT4u9P
