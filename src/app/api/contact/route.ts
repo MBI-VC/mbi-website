@@ -1,19 +1,5 @@
 import { NextResponse } from 'next/server'
-
-/**
- * Contact Form API Route
- *
- * TODO: Wire this to your preferred email service:
- * - Resend (https://resend.com)
- * - Postmark (https://postmarkapp.com)
- * - SendGrid (https://sendgrid.com)
- * - Formspree (https://formspree.io)
- * - Or forward to a webhook/Zapier
- *
- * Environment variables needed:
- * - EMAIL_SERVICE_API_KEY
- * - CONTACT_EMAIL (where to send submissions)
- */
+import { setDefaultResultOrder } from 'node:dns'
 
 interface ContactFormData {
   name: string
@@ -26,45 +12,51 @@ interface ContactFormData {
 export async function POST(request: Request) {
   try {
     const data: ContactFormData = await request.json()
+    const baseId = process.env.AIRTABLE_BASE_ID
+    const tableName = process.env.AIRTABLE_TABLE_NAME || process.env.AIRTABLE_TABLE_ID_WEB || 'Web'
+    const token = process.env.AIRTABLE_TOKEN
 
-    // Validate required fields
-    if (!data.name || !data.email || !data.message) {
+    if (!baseId || !token) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
+        { error: 'Airtable environment variables are not configured' },
+        { status: 500 }
       )
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(data.email)) {
+    setDefaultResultOrder('ipv4first')
+    const response = await fetch(
+      `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(tableName)}`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          records: [
+            {
+              fields: {
+                Email: data.email ?? '',
+                Name: data.name ?? '',
+                Company: data.company ?? '',
+                URL: data.website ?? '',
+                Story: data.message ?? '',
+                Newsletter: false,
+              },
+            },
+          ],
+        }),
+      }
+    )
+
+    if (!response.ok) {
+      const errorBody = await response.text()
+      console.error('Airtable contact error:', errorBody)
       return NextResponse.json(
-        { error: 'Invalid email format' },
-        { status: 400 }
+        { error: 'Failed to store contact submission' },
+        { status: 500 }
       )
     }
-
-    // TODO: Implement actual email sending
-    // Example with Resend:
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    // await resend.emails.send({
-    //   from: 'MBI Contact Form <noreply@mbi.vc>',
-    //   to: process.env.CONTACT_EMAIL,
-    //   replyTo: data.email,
-    //   subject: `Contact Form: ${data.name} from ${data.company || 'Unknown Company'}`,
-    //   html: `
-    //     <h2>New Contact Form Submission</h2>
-    //     <p><strong>Name:</strong> ${data.name}</p>
-    //     <p><strong>Email:</strong> ${data.email}</p>
-    //     <p><strong>Company:</strong> ${data.company || 'Not provided'}</p>
-    //     <p><strong>Website/Deck:</strong> ${data.website || 'Not provided'}</p>
-    //     <h3>Message:</h3>
-    //     <p>${data.message}</p>
-    //   `,
-    // })
-
-    // For now, log to console (remove in production)
-    console.log('Contact form submission:', data)
 
     return NextResponse.json({ success: true })
   } catch (error) {

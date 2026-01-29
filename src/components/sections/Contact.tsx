@@ -13,12 +13,6 @@ interface FormData {
   honeypot: string
 }
 
-interface FormErrors {
-  name?: string
-  email?: string
-  message?: string
-}
-
 export function Contact() {
   const headerReveal = useScrollReveal()
   const formReveal = useScrollReveal()
@@ -31,29 +25,7 @@ export function Contact() {
     message: '',
     honeypot: '',
   })
-  const [errors, setErrors] = useState<FormErrors>({})
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
-
-  const validateForm = (): boolean => {
-    const newErrors: FormErrors = {}
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required'
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required'
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email'
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required'
-    }
-
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
@@ -62,8 +34,6 @@ export function Contact() {
       setStatus('success')
       return
     }
-
-    if (!validateForm()) return
 
     setStatus('submitting')
 
@@ -91,10 +61,8 @@ export function Contact() {
     }
   }
 
-  const inputClasses = (hasError: boolean) =>
-    `w-full px-5 py-4 bg-dark-800/50 border rounded-xl text-white placeholder-dark-500 transition-all focus:outline-none focus:ring-2 focus:ring-accent-500/20 ${
-      hasError ? 'border-red-500/50 focus:border-red-500' : 'border-dark-700 focus:border-accent-500'
-    }`
+  const inputClasses = () =>
+    'w-full px-5 py-4 bg-dark-800/50 border border-dark-700 rounded-xl text-white placeholder-dark-500 transition-all focus:outline-none focus:ring-2 focus:ring-accent-500/20 focus:border-accent-500'
 
   return (
     <section id="contact" className="section-padding bg-dark-900 relative overflow-hidden">
@@ -184,9 +152,8 @@ export function Contact() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder={contact.form.fields.name.placeholder}
-                      className={inputClasses(!!errors.name)}
+                      className={inputClasses()}
                     />
-                    {errors.name && <p className="mt-2 text-sm text-red-400">{errors.name}</p>}
                   </div>
 
                   <div>
@@ -199,9 +166,8 @@ export function Contact() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder={contact.form.fields.email.placeholder}
-                      className={inputClasses(!!errors.email)}
+                      className={inputClasses()}
                     />
-                    {errors.email && <p className="mt-2 text-sm text-red-400">{errors.email}</p>}
                   </div>
                 </div>
 
@@ -217,7 +183,7 @@ export function Contact() {
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       placeholder={contact.form.fields.company.placeholder}
-                      className={inputClasses(false)}
+                      className={inputClasses()}
                     />
                   </div>
 
@@ -226,12 +192,12 @@ export function Contact() {
                       {contact.form.fields.website.label}
                     </label>
                     <input
-                      type="url"
+                      type="text"
                       id="website"
                       value={formData.website}
                       onChange={(e) => setFormData({ ...formData, website: e.target.value })}
                       placeholder={contact.form.fields.website.placeholder}
-                      className={inputClasses(false)}
+                      className={inputClasses()}
                     />
                   </div>
                 </div>
@@ -247,9 +213,8 @@ export function Contact() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder={contact.form.fields.message.placeholder}
-                    className={inputClasses(!!errors.message)}
+                    className={inputClasses()}
                   />
-                  {errors.message && <p className="mt-2 text-sm text-red-400">{errors.message}</p>}
                 </div>
 
                 {/* Error message */}
