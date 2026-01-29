@@ -48,7 +48,7 @@ export const approach = {
   paragraphs: [
     'Ideas matter, but the people behind them matter more. The best founders refuse to quit. They adapt when things go sideways and find a way forward when most others would stop.',
     'We look for businesses that have proven something in the real world, even if it\'s just early customers or modest revenue. That proof of life shows real validation and a founder who\'s pushed through obstacles to ship.',
-    'We\'re not passive capital. We look for opportunities where our operating experience can meaningfully accelerate your trajectory.',
+    'We\'re not passive capital. We look for opportunities where our operating experience can meaningfully accelerate your trajectory, and we move quickly when conviction is there.',
   ],
 
   investmentDetails: {
@@ -83,7 +83,7 @@ export const approach = {
 
   howWeHelp: {
     title: 'How We Help',
-    description: 'We roll up our sleeves. Our partners take board seats, advise on strategy, and often embed directly with portfolio companies.',
+    description: 'We roll up our sleeves. Our partners take board seats, advise on strategy, and have the ability to embed high impact team members directly with portfolio companies.',
     items: [
       { label: 'Strategy', detail: 'Positioning and go-to-market' },
       { label: 'Product', detail: 'Roadmap and prioritization' },
@@ -167,6 +167,8 @@ export const portfolio = {
       description: 'Franchise team in the SPHL.',
       url: '', // TODO: Add URL
       category: 'Sports',
+      badge: 'Launching Soon',
+      isUpcoming: true,
     },
     {
       name: 'Savannah Ice Cove & Amphitheatre',
@@ -203,7 +205,7 @@ export const team = {
       highlights: [
         'Built Financial Media Corp from a blog to 130+ employees across 5 countries',
         'Sold majority stake to VNR Verlag, one of Germany\'s largest publishers (2021)',
-        'Former securities broker (Series 3, 7, 24, 65, 66)',
+        'Former securities licenses (Series 3, 7, 24, 65, 66)',
         'Auburn University "20 Under 40" honoree',
       ],
       boards: ['Access Global Media', 'Cape Media', 'Prediction Media'],

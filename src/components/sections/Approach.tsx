@@ -50,7 +50,7 @@ export function Approach() {
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl">
             {[
               { label: 'Stage', value: approach.investmentDetails.stage, highlight: false },
-              { label: 'Check Size', value: approach.investmentDetails.checkSize, highlight: true },
+              { label: 'Typical Check Size', value: approach.investmentDetails.checkSize, highlight: true },
             ].map((item, index) => (
               <div
                 key={item.label}
