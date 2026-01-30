@@ -201,9 +201,27 @@ export function Investments() {
                         </span>
                       </div>
 
-                      <p className="text-dark-400 text-sm leading-relaxed mb-4 group-hover:text-dark-300 transition-colors">
+                      <p className="text-dark-400 text-sm leading-relaxed mb-6 group-hover:text-dark-300 transition-colors">
                         {investment.description}
                       </p>
+
+                      <div className="mt-auto">
+                        {investment.url ? (
+                          <a
+                            href={investment.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-sm text-dark-500 hover:text-accent-400 transition-all duration-300 group/link"
+                          >
+                            <span>Visit site</span>
+                            <svg className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                        ) : (
+                          <span className="text-sm text-dark-600">Coming soon</span>
+                        )}
+                      </div>
                     </div>
                   </article>
                 )
