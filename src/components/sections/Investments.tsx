@@ -163,18 +163,11 @@ export function Investments() {
           </div>
         </div>
 
-        {/* Debug: show upcoming count */}
-        <div className="text-white text-sm mb-4">
-          Debug: {investments.length} total, {upcomingInvestments.length} upcoming
-        </div>
-
         {/* Upcoming investments - only show when loaded */}
         {upcomingInvestments.length > 0 && (
           <div
             ref={upcomingReveal.ref}
-            className={`mt-20 transition-all duration-700 ${
-              upcomingReveal.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
+            className="mt-20 transition-all duration-700"
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="flex items-center gap-3">
