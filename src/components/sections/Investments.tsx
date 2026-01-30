@@ -1,24 +1,46 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { portfolio } from '@/content/site-content'
 import { useScrollReveal } from '@/hooks/useScrollReveal'
+import type { PortfolioItem } from '@/app/api/portfolio/route'
 
 const categoryColors: Record<string, { bg: string; text: string; border: string; glow: string }> = {
   Media: { bg: 'bg-blue-500/10', text: 'text-blue-400', border: 'border-blue-500/20', glow: 'rgba(59,130,246,0.3)' },
   Sports: { bg: 'bg-emerald-500/10', text: 'text-emerald-400', border: 'border-emerald-500/20', glow: 'rgba(16,185,129,0.3)' },
   Technology: { bg: 'bg-purple-500/10', text: 'text-purple-400', border: 'border-purple-500/20', glow: 'rgba(168,85,247,0.3)' },
   Entertainment: { bg: 'bg-pink-500/10', text: 'text-pink-400', border: 'border-pink-500/20', glow: 'rgba(236,72,153,0.3)' },
+  CPG: { bg: 'bg-amber-500/10', text: 'text-amber-400', border: 'border-amber-500/20', glow: 'rgba(245,158,11,0.3)' },
 }
 
 const defaultCategory = { bg: 'bg-dark-800', text: 'text-dark-400', border: 'border-dark-700', glow: 'rgba(168,85,247,0.2)' }
 
 export function Investments() {
+  const [investments, setInvestments] = useState<PortfolioItem[]>([])
+  const [isLoading, setIsLoading] = useState(true)
   const headerReveal = useScrollReveal()
   const gridReveal = useScrollReveal()
   const upcomingReveal = useScrollReveal()
 
-  const activeInvestments = portfolio.investments.filter((i) => !i.isUpcoming)
-  const upcomingInvestments = portfolio.investments.filter((i) => i.isUpcoming)
+  useEffect(() => {
+    async function fetchPortfolio() {
+      try {
+        const response = await fetch('/api/portfolio')
+        if (response.ok) {
+          const data = await response.json()
+          setInvestments(data.investments)
+        }
+      } catch (error) {
+        console.error('Failed to fetch portfolio:', error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    fetchPortfolio()
+  }, [])
+
+  const activeInvestments = investments.filter((i) => !i.isUpcoming)
+  const upcomingInvestments = investments.filter((i) => i.isUpcoming)
 
   return (
     <section id="investments" className="section-padding bg-dark-950 relative overflow-hidden">
@@ -66,7 +88,25 @@ export function Investments() {
           }`}
         >
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {activeInvestments.map((investment, index) => {
+            {isLoading ? (
+              // Loading skeleton
+              Array.from({ length: 6 }).map((_, index) => (
+                <div
+                  key={index}
+                  className="p-6 bg-dark-900/50 rounded-2xl border border-dark-800 animate-pulse"
+                >
+                  <div className="flex items-start justify-between gap-3 mb-4">
+                    <div className="h-6 bg-dark-700 rounded w-32" />
+                    <div className="h-6 bg-dark-700 rounded-full w-16" />
+                  </div>
+                  <div className="space-y-2 mb-6">
+                    <div className="h-4 bg-dark-700 rounded w-full" />
+                    <div className="h-4 bg-dark-700 rounded w-3/4" />
+                  </div>
+                  <div className="h-4 bg-dark-700 rounded w-20" />
+                </div>
+              ))
+            ) : activeInvestments.map((investment, index) => {
               const colors = categoryColors[investment.category] || defaultCategory
               return (
                 <article
@@ -123,7 +163,7 @@ export function Investments() {
           </div>
         </div>
 
-        {/* Upcoming investments */}
+        {/* Upcoming investments - only show when loaded */}
         {upcomingInvestments.length > 0 && (
           <div
             ref={upcomingReveal.ref}
