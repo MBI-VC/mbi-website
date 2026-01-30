@@ -196,20 +196,14 @@ export function Investments() {
                         <h3 className="text-xl font-bold text-white group-hover:text-accent-400 transition-colors">
                           {investment.name}
                         </h3>
-                        {investment.badge && (
-                          <span className="flex-shrink-0 text-xs font-bold px-3 py-1 bg-accent-500 text-dark-950 rounded-full transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_-5px_rgba(168,85,247,0.5)]">
-                            {investment.badge}
-                          </span>
-                        )}
+                        <span className={`flex-shrink-0 text-xs font-medium px-3 py-1 rounded-full border transition-all duration-300 group-hover:scale-105 ${colors.bg} ${colors.text} ${colors.border}`}>
+                          {investment.category}
+                        </span>
                       </div>
 
                       <p className="text-dark-400 text-sm leading-relaxed mb-4 group-hover:text-dark-300 transition-colors">
                         {investment.description}
                       </p>
-
-                      <span className={`text-xs font-medium px-3 py-1 rounded-full border transition-all duration-300 group-hover:scale-105 ${colors.bg} ${colors.text} ${colors.border}`}>
-                        {investment.category}
-                      </span>
                     </div>
                   </article>
                 )
