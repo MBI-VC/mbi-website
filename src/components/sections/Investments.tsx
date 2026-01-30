@@ -163,6 +163,11 @@ export function Investments() {
           </div>
         </div>
 
+        {/* Debug: show upcoming count */}
+        <div className="text-white text-sm mb-4">
+          Debug: {investments.length} total, {upcomingInvestments.length} upcoming
+        </div>
+
         {/* Upcoming investments - only show when loaded */}
         {upcomingInvestments.length > 0 && (
           <div
