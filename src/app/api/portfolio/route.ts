@@ -74,7 +74,7 @@ export async function GET() {
         description: record.fields['Short Description'] || '',
         url: record.fields.Website || '',
         category: record.fields.Sector || '',
-        isUpcoming: record.fields['Portfolio Type'] === 'Launching Soon',
+        isUpcoming: record.fields['Portfolio Type']?.toLowerCase().trim() === 'launching soon',
       }))
       .filter((item) => item.name) // Filter out items without names
       .sort((a, b) => a.name.localeCompare(b.name)) // Sort alphabetically
