@@ -62,7 +62,7 @@ export const approach = {
     {
       title: 'Trust',
       question: 'Do we trust the person running the business?',
-      description: 'Trust is everything. We back founders whose word means something, who communicate honestly in good times and bad. We\'d rather back someone we trust with an imperfect plan than a brilliant strategist we don\'t believe.',
+      description: 'Trust is everything. We back founders whose word means something, who communicate honestly in good times and bad. When trust is there, everything else can be figured out, together.',
     },
     {
       title: 'Conviction',
