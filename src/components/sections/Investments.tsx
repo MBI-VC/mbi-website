@@ -41,6 +41,7 @@ export function Investments() {
 
   const activeInvestments = investments.filter((i) => !i.isUpcoming)
   const upcomingInvestments = investments.filter((i) => i.isUpcoming)
+  const companyCount = isLoading ? portfolio.stats.companies : investments.length.toString()
 
   return (
     <section id="investments" className="section-padding bg-dark-950 relative overflow-hidden">
@@ -70,7 +71,7 @@ export function Investments() {
           {/* Stats - Interactive */}
           <div className="flex flex-wrap gap-12 mt-10">
             <div className="group cursor-default transition-all duration-300 hover:-translate-y-1">
-              <p className="text-5xl font-bold text-white group-hover:text-accent-400 transition-colors">{portfolio.stats.companies}</p>
+              <p className="text-5xl font-bold text-white group-hover:text-accent-400 transition-colors">{companyCount}</p>
               <p className="mt-1 text-dark-500 uppercase tracking-wider text-sm group-hover:text-dark-400 transition-colors">Companies</p>
             </div>
             <div className="group cursor-default transition-all duration-300 hover:-translate-y-1">
