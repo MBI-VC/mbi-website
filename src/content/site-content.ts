@@ -205,7 +205,8 @@ export const team = {
       highlights: [
         'Built Financial Media Corp from a blog to 130+ employees across 5 countries',
         'Sold majority stake to VNR Verlag, one of Germany\'s largest publishers (2021)',
-        'Former securities licenses (Series 3, 7, 24, 65, 66)',
+        'Board Member of Light of the Village Ministry in Prichard, AL',
+        'Member of CEO Leaderboard Group in Jacksonville, FL',
         'Auburn University "20 Under 40" honoree',
       ],
       boards: ['Access Global Media', 'Cape Media', 'Prediction Media'],
